@@ -8,4 +8,14 @@ import { Component } from '@angular/core';
 })
 export class AttributeBindingComponent {
 
+  isDisabled = false;
+
+  buttonTitle = 'Título do botão';
+  buttonDisable = true;
+
+
+  onButtonClick() {
+    this.buttonTitle = 'Título Alterado';
+    this.buttonDisable = !this.buttonDisable;
+  }
 }

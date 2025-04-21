@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DecoratorInputComponent } from './decorator-input.component';
+import { FilhoComponent } from './filho.component';
 
-describe('DecoratorInputComponent', () => {
-  let component: DecoratorInputComponent;
-  let fixture: ComponentFixture<DecoratorInputComponent>;
+describe('FilhoComponent', () => {
+  let component: FilhoComponent;
+  let fixture: ComponentFixture<FilhoComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [DecoratorInputComponent]
+      declarations: [FilhoComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(DecoratorInputComponent);
+    fixture = TestBed.createComponent(FilhoComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

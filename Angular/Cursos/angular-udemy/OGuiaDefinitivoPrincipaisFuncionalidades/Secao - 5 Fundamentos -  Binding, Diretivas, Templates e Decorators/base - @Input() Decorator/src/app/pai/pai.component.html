@@ -1,0 +1,8 @@
+<div>
+    <p>Componente Pai enviando um dado ao c filho. </p>
+</div>
+<div class="wrapper">
+    <input type="checkbox" [(ngModel)]="isChecked" />
+    <p>Check para enviar o nome!! (Pai)</p>
+</div>
+<app-filho [checked]="isChecked"></app-filho>
