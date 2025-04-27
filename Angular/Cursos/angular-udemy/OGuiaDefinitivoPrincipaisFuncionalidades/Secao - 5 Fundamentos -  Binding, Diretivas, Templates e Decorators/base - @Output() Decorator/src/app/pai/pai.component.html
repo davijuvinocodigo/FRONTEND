@@ -1,5 +1,5 @@
-<div>
-    <p>Componente Filho enviando um dado ao c pai. </p>
-</div>
-
 <app-filho (mensagem)="exibirMensagem($event)"></app-filho>
+
+<div>
+    <p>Componente Pai: {{mensagem}}</p>
+</div>

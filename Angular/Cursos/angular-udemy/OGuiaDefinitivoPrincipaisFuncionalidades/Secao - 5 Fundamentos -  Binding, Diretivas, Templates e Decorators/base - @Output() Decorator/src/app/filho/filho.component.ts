@@ -11,11 +11,9 @@ export class FilhoComponent implements OnInit {
   @Output() mensagem = new EventEmitter<string>();
 
   constructor() { }
-
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
   enviarMensagem() {
-    this.mensagem.emit('O botao foi clicado');
+    this.mensagem.emit('Oi Pai alguem clicou no botão');
   }
 }

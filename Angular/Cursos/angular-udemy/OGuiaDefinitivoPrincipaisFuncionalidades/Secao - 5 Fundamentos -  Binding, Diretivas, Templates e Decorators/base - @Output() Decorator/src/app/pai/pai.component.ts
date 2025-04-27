@@ -8,11 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaiComponent implements OnInit{
 
+  mensagem: string = '';
+  
   constructor() {}
-
   ngOnInit() {}
 
   exibirMensagem(msg: string) {
-    alert('Mensagem do filho: ' + msg);
+    this.mensagem = msg;
   }
 }

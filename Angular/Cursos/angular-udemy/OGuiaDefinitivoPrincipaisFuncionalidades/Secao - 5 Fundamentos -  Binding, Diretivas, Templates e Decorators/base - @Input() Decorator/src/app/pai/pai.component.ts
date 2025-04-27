@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaiComponent implements OnInit{
 
-  isChecked = false;
+  mensagemParaFilho = 'Olá, Filho!';
+  
   constructor() {}
-
   ngOnInit() {}
 }

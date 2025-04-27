@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class FilhoComponent implements OnInit {
 
-  @Input() checked!: boolean;
+  @Input() mensagem!: string; // Recebe uma string do componente pai
 
   constructor() { }
 
