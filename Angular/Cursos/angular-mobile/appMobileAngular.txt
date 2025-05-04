@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=UUiHB8VC_to
+ng new materialApp --routing --style=scss --no-standalone
+ng add @angular/material
+ng generate @angular/material:navigation app-navigation
+ng generate @angular/material:dashboard dashboard
+ng g c about
+ng g c error
+
+npm i @capacitor/cli --save-dev
+npx cap init
+npm i @capacitor/core @capacitor/ios @capacitor/android
+npx cap add ios
+npx cap add android
+npx cap sync
