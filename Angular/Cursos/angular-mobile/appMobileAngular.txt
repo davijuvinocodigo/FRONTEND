@@ -12,3 +12,4 @@ npm i @capacitor/core @capacitor/ios @capacitor/android
 npx cap add ios
 npx cap add android
 npx cap sync
+npx cap open android
