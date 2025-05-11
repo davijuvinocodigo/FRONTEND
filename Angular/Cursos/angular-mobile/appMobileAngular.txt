@@ -1,10 +1,10 @@
 https://www.youtube.com/watch?v=UUiHB8VC_to
-ng new materialApp --routing --style=scss --no-standalone
+ng new materialApp --ssr
 ng add @angular/material
-ng generate @angular/material:navigation app-navigation
-ng generate @angular/material:dashboard dashboard
-ng g c about
-ng g c error
+ng generate @angular/material:navigation component/navigation
+ng generate @angular/material:dashboard component/dashboard
+ng g c pages/about
+ng g c pages/error
 
 npm i @capacitor/cli --save-dev
 npx cap init
