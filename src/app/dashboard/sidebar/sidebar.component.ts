@@ -1,9 +1,15 @@
 import { Component, Input } from '@angular/core';
+
 import { DashboardService } from '../dashboard.service';
+import { SidebarHeaderComponent } from './sidebar-header/sidebar-header.component';
+import { SidebarItemsComponent } from './sidebar-items/sidebar-items.component';
 
 @Component({
   selector: 'app-sidebar',
-  imports: [],
+  imports: [
+    SidebarHeaderComponent,
+    SidebarItemsComponent
+  ],
   templateUrl: './sidebar.component.html',
   styleUrl: './sidebar.component.scss'
 })

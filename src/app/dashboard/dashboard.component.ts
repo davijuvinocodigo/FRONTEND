@@ -2,9 +2,17 @@ import { Component } from '@angular/core';
 import { DashboardService } from './dashboard.service';
 import { Event, NavigationEnd, Router } from '@angular/router';
 
+import { OverlayComponent } from './overlay/overlay.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+import { TopBarComponent } from './top-bar/top-bar.component';
+
 @Component({
   selector: 'app-dashboard',
-  imports: [],
+  imports: [
+    OverlayComponent,
+    SidebarComponent,
+    TopBarComponent
+  ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.scss'
 })
