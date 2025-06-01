@@ -1,37 +1,45 @@
 ---
-title: SSR Angular 19 + TypeScript
-description: The default Server Side Rendered Angular TS starter
+title: Angular + TypeScript + Caddy
+description: The default Angular TS starter, utilizing `Caddy` to serve the built single page app
 tags:
   - Node
   - Angular 19
   - TypeScript
+  - Caddy
 ---
 
-# SSR Angular + TypeScript
+# Angular + TypeScript + Caddy
 
-This project was originally generated with [`ng new my-app`](https://angular.dev/installation#create-a-new-project) and selecting `Yes` when asked to use SSR.
+This project was originally generated with [`ng new my-app`](https://angular.dev/tools/cli/setup-local#create-a-workspace-and-initial-application)
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/A5t142)
+[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/template/13NBfA?referralCode=brody)
 
 ## ✨ Features
 
-- SSR Angular 19 + TypeScript
+- Angular 19 + TypeScript + Caddy
+- Caddy v2
 
 ## 💁‍♀️ Local Development
 
 - Install required dependencies with `npm install`
-- Run `npm run dev` for a local development server
+- Run `npm run dev` for a dev server
 - Navigate to `http://127.0.0.1:4200/`. The application will automatically reload if you change any of the source files.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
-## ❓ What was changed from the default Angular 19 Server Side Rendered example?
+## ❓ Why use `Caddy` when deploying to Railway?
 
-- The `start` script was renamed to `dev` since it starts a local development server.
-- The `serve:ssr:my-app` script was renamed to `start` since it starts the production server.
+Caddy is a powerful, enterprise-ready, open source web server, and therefore Caddy is far better suited to serve websites than `ng serve` is, using Caddy will result in much less memory and cpu usage compared to serving with `ng serve` (much lower running costs too)
 
-Railway will automatically use the `build` and `start` scripts from the package.json.
+To see how this is achieved with nixpacks, check out the fully documented nixpacks.toml file in this repository
 
-Angular's server side rendered server will listen on the host `0.0.0.0` and the `PORT` environment variable that Railway expects the app to.
+The configuration for Caddy is called a Caddyfile, and you can edit that file to further suite your needs, by default it comes configured to serve a single page app for Angular, and to also gzip the responses
 
-Thats all the changes needed to deploy a server side rendered Angular 19 app on Railway!
+**Relevant Caddy documentation:**
+
+- [The Caddyfile](https://caddyserver.com/docs/caddyfile)
+- [Caddyfile Directives](https://caddyserver.com/docs/caddyfile/directives)
+- [root](https://caddyserver.com/docs/caddyfile/directives/root)
+- [encode](https://caddyserver.com/docs/caddyfile/directives/encode)
+- [file_server](https://caddyserver.com/docs/caddyfile/directives/file_server)
+- [try_files](https://caddyserver.com/docs/caddyfile/directives/try_files)
